@@ -4,7 +4,7 @@
 
 	$file = $_REQUEST['filename'];
 	$displayfile = preg_replace('/\//','_',$file);
-//DEBUG-CHANGE
+//DEBUG-CHANGEfdgfdgfd
 	$filename="/data/csiadm/ericssonvalues/$file";
 
 if(file_exists($filename)){
