@@ -1,0 +1,2 @@
+login as root and go to /var/log/apache2 directory
+bzgrep  uploadsultcba321789 access_log access_log-2015*.bz2 |cut -d':' -f2|sort|uniq

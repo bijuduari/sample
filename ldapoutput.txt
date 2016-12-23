@@ -1,0 +1,552 @@
+Array
+(
+    [count] => 1
+    [0] => Array
+        (
+            [modifytimestamp] => Array
+                (
+                    [count] => 1
+                    [0] => 20150408081635Z
+                )
+
+            [0] => modifytimestamp
+            [modifiersname] => Array
+                (
+                    [count] => 1
+                    [0] => uid=dsamgr,ou=partners,ou=external,o=ericsson
+                )
+
+            [1] => modifiersname
+            [eritelephonenumber] => Array
+                (
+                    [count] => 1
+                    [0] => 889 90250
+                )
+
+            [2] => eritelephonenumber
+            [ebuportalcompany] => Array
+                (
+                    [count] => 1
+                    [0] => Ericsson
+                )
+
+            [3] => ebuportalcompany
+            [ebuportalworkarea] => Array
+                (
+                    [count] => 1
+                    [0] => Other
+                )
+
+            [4] => ebuportalworkarea
+            [ebuportalresponsibility] => Array
+                (
+                    [count] => 1
+                    [0] => -
+                )
+
+            [5] => ebuportalresponsibility
+            [nopportalname] => Array
+                (
+                    [count] => 1
+                    [0] => EriCOLL Extranet Internal Users
+                )
+
+            [6] => nopportalname
+            [noploginid] => Array
+                (
+                    [count] => 1
+                    [0] => EVYZACA
+                )
+
+            [7] => noploginid
+            [ebuportalaccesssearch] => Array
+                (
+                    [count] => 1
+                    [0] => EriCOLL Extranet Internal Users Ericsson user
+                )
+
+            [8] => ebuportalaccesssearch
+            [ebuportalaccess] => Array
+                (
+                    [count] => 1
+                    [0] => EVYZACA$6929$2
+                )
+
+            [9] => ebuportalaccess
+            [ebuportalsysadmin] => Array
+                (
+                    [count] => 1
+                    [0] => FALSE
+                )
+
+            [10] => ebuportalsysadmin
+            [eripwsynchdate] => Array
+                (
+                    [count] => 1
+                    [0] => 20150223 05:37:46
+                )
+
+            [11] => eripwsynchdate
+            [roomnumber] => Array
+                (
+                    [count] => 1
+                    [0] => 6A-075
+                )
+
+            [12] => roomnumber
+            [erioporgunitname] => Array
+                (
+                    [count] => 1
+                    [0] => BUGS GSI M&A Adaptn RNAM
+                )
+
+            [13] => erioporgunitname
+            [erioporgunitidentifier] => Array
+                (
+                    [count] => 1
+                    [0] => 31055255
+                )
+
+            [14] => erioporgunitidentifier
+            [erioporgunitabbreviation] => Array
+                (
+                    [count] => 1
+                    [0] => BUGSIFDQBB
+                )
+
+            [15] => erioporgunitabbreviation
+            [erioperationalmanager] => Array
+                (
+                    [count] => 1
+                    [0] => ERATBHA
+                )
+
+            [16] => erioperationalmanager
+            [ericostcenter] => Array
+                (
+                    [count] => 1
+                    [0] => 2828081315
+                )
+
+            [17] => ericostcenter
+            [employeetype] => Array
+                (
+                    [count] => 1
+                    [0] => Workforce
+                )
+
+            [18] => employeetype
+            [erica-attesternl] => Array
+                (
+                    [count] => 1
+                    [0] => 7JXltEZFrInObw8n0ibViwgqPu0=
+                )
+
+            [19] => erica-attesternl
+            [erica-nlotp-user] => Array
+                (
+                    [count] => 1
+                    [0] => q8G8UIlh4/qQZJ4GlF4qXrDhCAQ=
+                )
+
+            [20] => erica-nlotp-user
+            [erica-employmentform] => Array
+                (
+                    [count] => 1
+                    [0] => 1
+                )
+
+            [21] => erica-employmentform
+            [erica-keyrecoverynl-auth] => Array
+                (
+                    [count] => 1
+                    [0] => 1
+                )
+
+            [22] => erica-keyrecoverynl-auth
+            [erica-nl-auth] => Array
+                (
+                    [count] => 1
+                    [0] => 2
+                )
+
+            [23] => erica-nl-auth
+            [uidnumber] => Array
+                (
+                    [count] => 1
+                    [0] => 0135859
+                )
+
+            [24] => uidnumber
+            [eriunixuidnumber] => Array
+                (
+                    [count] => 1
+                    [0] => 0135859
+                )
+
+            [25] => eriunixuidnumber
+            [erisignummodifytimestamp] => Array
+                (
+                    [count] => 1
+                    [0] => 2013-10-10-06.33.14.233149
+                )
+
+            [26] => erisignummodifytimestamp
+            [mobile] => Array
+                (
+                    [count] => 1
+                    [0] => +919008214941
+                )
+
+            [27] => mobile
+            [erimobilenumbersource] => Array
+                (
+                    [count] => 1
+                    [0] => AD
+                )
+
+            [28] => erimobilenumbersource
+            [erimasterdomain] => Array
+                (
+                    [count] => 1
+                    [0] => ERICSSON
+                )
+
+            [29] => erimasterdomain
+            [memberof] => Array
+                (
+                    [count] => 3
+                    [0] => cn=ep_ess_02_c_mus,ou=groups,ou=ep6portal,ou=apps,ou=internal,o=ericsson
+                    [1] => cn=src_clm_app_user_rw,ou=groups,ou=ep6portal,ou=apps,ou=internal,o=ericsson
+                    [2] => cn=ep_sms_cns,ou=groups,ou=ep6portal,ou=apps,ou=internal,o=ericsson
+                )
+
+            [30] => memberof
+            [mail] => Array
+                (
+                    [count] => 1
+                    [0] => murugesan.m@ericsson.com
+                )
+
+            [31] => mail
+            [eriproxyaddresses] => Array
+                (
+                    [count] => 3
+                    [0] => SIP:murugesan.m@ericsson.com
+                    [1] => SMTP:murugesan.m@ericsson.com
+                    [2] => X400:c=SE;a=400net;p=Ericsson;o=COM;cn=EVYZACA;ou1=ex1
+                )
+
+            [32] => eriproxyaddresses
+            [erimailsource] => Array
+                (
+                    [count] => 1
+                    [0] => AD
+                )
+
+            [33] => erimailsource
+            [erilegacyexchangedn] => Array
+                (
+                    [count] => 1
+                    [0] => /o=Ericsson/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=evyzaca573
+                )
+
+            [34] => erilegacyexchangedn
+            [eriexchangeserver] => Array
+                (
+                    [count] => 1
+                    [0] => CN=Microsoft MTA,CN=ESESSMB203,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Ericsson,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=ericsson,DC=se
+                )
+
+            [35] => eriexchangeserver
+            [eridisplayname] => Array
+                (
+                    [count] => 1
+                    [0] => Murugesan M
+                )
+
+            [36] => eridisplayname
+            [mdsentityowner] => Array
+                (
+                    [count] => 1
+                    [0] => CV,Eri#Sgnum
+                )
+
+            [37] => mdsentityowner
+            [mdscvlinktype] => Array
+                (
+                    [count] => 2
+                    [0] => EP50#Eri#A
+                    [1] => ECD#Eri#A
+                )
+
+            [38] => mdscvlinktype
+            [mdslinktomv] => Array
+                (
+                    [count] => 2
+                    [0] => EP50#Eri#cn=EVYZACA
+                    [1] => ECD#Eri#uid=evyzaca
+                )
+
+            [39] => mdslinktomv
+            [objectclass] => Array
+                (
+                    [count] => 11
+                    [0] => mdsCVLink
+                    [1] => InetOrgPerson
+                    [2] => EricssonInternal
+                    [3] => EricssonCommon
+                    [4] => organizationalPerson
+                    [5] => person
+                    [6] => top
+                    [7] => inetuser
+                    [8] => ericssonEBUPortal
+                    [9] => ericssonPortal
+                    [10] => ericssonNop
+                )
+
+            [40] => objectclass
+            [cn] => Array
+                (
+                    [count] => 2
+                    [0] => EVYZACA
+                    [1] => Murugesan M
+                )
+
+            [41] => cn
+            [employeenumber] => Array
+                (
+                    [count] => 1
+                    [0] => 23418249
+                )
+
+            [42] => employeenumber
+            [eribirthname] => Array
+                (
+                    [count] => 1
+                    [0] => Murugesan
+                )
+
+            [43] => eribirthname
+            [eribuildingnumber] => Array
+                (
+                    [count] => 1
+                    [0] => BM01
+                )
+
+            [44] => eribuildingnumber
+            [ericn] => Array
+                (
+                    [count] => 1
+                    [0] => Murugesan M
+                )
+
+            [45] => ericn
+            [ericonnection] => Array
+                (
+                    [count] => 1
+                    [0] => E
+                )
+
+            [46] => ericonnection
+            [ericountry] => Array
+                (
+                    [count] => 1
+                    [0] => India
+                )
+
+            [47] => ericountry
+            [ericountrycode] => Array
+                (
+                    [count] => 1
+                    [0] => IN
+                )
+
+            [48] => ericountrycode
+            [erigivenname] => Array
+                (
+                    [count] => 1
+                    [0] => Murugesan
+                )
+
+            [49] => erigivenname
+            [erihrcontact] => Array
+                (
+                    [count] => 1
+                    [0] => Y
+                )
+
+            [50] => erihrcontact
+            [eriisopmgr] => Array
+                (
+                    [count] => 1
+                    [0] => N
+                )
+
+            [51] => eriisopmgr
+            [erijobarea] => Array
+                (
+                    [count] => 1
+                    [0] => 82 Service Delivery
+                )
+
+            [52] => erijobarea
+            [erijobfamily] => Array
+                (
+                    [count] => 1
+                    [0] => 8230 Deployment and Integration
+                )
+
+            [53] => erijobfamily
+            [erijobname] => Array
+                (
+                    [count] => 1
+                    [0] => SOFTWARE DEVELOPER
+                )
+
+            [54] => erijobname
+            [eripayrollnumber] => Array
+                (
+                    [count] => 1
+                    [0] => EGIL21648
+                )
+
+            [55] => eripayrollnumber
+            [eripersonid] => Array
+                (
+                    [count] => 1
+                    [0] => 00298404
+                )
+
+            [56] => eripersonid
+            [eripositionid] => Array
+                (
+                    [count] => 1
+                    [0] => 31158746
+                )
+
+            [57] => eripositionid
+            [erisigntype] => Array
+                (
+                    [count] => 1
+                    [0] => I
+                )
+
+            [58] => erisigntype
+            [erisn] => Array
+                (
+                    [count] => 1
+                    [0] => M
+                )
+
+            [59] => erisn
+            [givenname] => Array
+                (
+                    [count] => 1
+                    [0] => Murugesan
+                )
+
+            [60] => givenname
+            [l] => Array
+                (
+                    [count] => 1
+                    [0] => BM
+                )
+
+            [61] => l
+            [ou] => Array
+                (
+                    [count] => 1
+                    [0] => EGI
+                )
+
+            [62] => ou
+            [physicaldeliveryofficename] => Array
+                (
+                    [count] => 1
+                    [0] => Bangalore
+                )
+
+            [63] => physicaldeliveryofficename
+            [postalcode] => Array
+                (
+                    [count] => 1
+                    [0] => 560048
+                )
+
+            [64] => postalcode
+            [sn] => Array
+                (
+                    [count] => 1
+                    [0] => M
+                )
+
+            [65] => sn
+            [st] => Array
+                (
+                    [count] => 1
+                    [0] => Karnataka
+                )
+
+            [66] => st
+            [street] => Array
+                (
+                    [count] => 1
+                    [0] => Bagmane WTC SEZ
+                )
+
+            [67] => street
+            [title] => Array
+                (
+                    [count] => 1
+                    [0] => Senior Solution Integrator
+                )
+
+            [68] => title
+            [uid] => Array
+                (
+                    [count] => 1
+                    [0] => EVYZACA
+                )
+
+            [69] => uid
+            [displayname] => Array
+                (
+                    [count] => 1
+                    [0] => Murugesan M
+                )
+
+            [70] => displayname
+            [smdisabled] => Array
+                (
+                    [count] => 1
+                    [0] => 0
+                )
+
+            [71] => smdisabled
+            [sametimeserver] => Array
+                (
+                    [count] => 1
+                    [0] => CN=STEMEA
+                )
+
+            [72] => sametimeserver
+            [creatorsname] => Array
+                (
+                    [count] => 1
+                    [0] => uid=egduser,ou=system accounts,o=ericsson
+                )
+
+            [73] => creatorsname
+            [createtimestamp] => Array
+                (
+                    [count] => 1
+                    [0] => 20130301113252Z
+                )
+
+            [74] => createtimestamp
+            [count] => 75
+            [dn] => uid=EVYZACA,ou=Users,ou=Internal,o=ericsson
+        )
+
+)

@@ -1,0 +1,11 @@
+<?php
+	session_start();
+		unset($_SESSION['login_name']);
+		unset($_SESSION['name']);
+                unset($_SESSION['dept']);
+		unset($_SESSION['login_category']);
+		unset($_SESSION['manager_corid']);
+		unset($_SESSION['email']);
+        session_destroy();
+	header("location:login.php");
+?>

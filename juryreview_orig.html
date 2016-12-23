@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='Confluence'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="icon" href="../../favicon.ico">-->
+
+  <title>Confluence 3 Dashboard</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="angular-tablesort.js"></script>
+  <script src="dashboard.js"></script>
+
+</head>
+<body>
+  <div ng-controller="ZoneCtrl"  class='col-md-12 col-lg-12' style='margin:auto 0px;float:none'>
+
+        <div ng-repeat="zone in zones" class="item col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-1" align='center'>
+           <h3 class='ericsson-sfont {{zone.zone_class}}'>{{zone.zone_label}} Zone</h3>
+           <div ng-repeat="(key, value) in zone.zone_types" class="item" align='center'>
+             <h4 class='ericsson-sfont {{zone.zone_class}}'>{{key}} Bays</h4>
+             <table class='table table-striped ts-wrapper {{zone.zone_class}}'>
+               <tbody>
+                 <tr>
+                 <th ts-criteria="booth_number">#</th>
+                 <th ts-criteria="booth_title">Title</th>
+                 <th ts-criteria="informative_avg">Informativeness avg</th>
+                 <th ts-criteria="innovative_avg">Innovativeness avg</th>
+                 <th ts-criteria=presentability_avg"">Presentability avg</th>
+                 <th ts-criteria="vote_count|parseInt" ts-default>Vote Count</th>
+                 <th ts-criteria="avg_by_weightage">Overal avg with weightage applied</th></tr>
+                 <tr ng-repeat="row in value" ts-repeat>
+                   <td>{{row.booth_number}}</td><td>{{row.booth_title}}</td><td>{{row.informative_avg}}</td>
+                   <td>{{row.innovative_avg}}</td><td>{{row.presentability_avg}}</td> <td>{{row.vote_count}}</td> 
+                   <td>{{row.avg_by_weightage}}</td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+        </div>
+  </div>
+</body>
+</html>
+

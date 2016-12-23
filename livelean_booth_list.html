@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='Confluence'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Confluence 3.0 Dashboard</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="jquery.flot.js"></script>
+  <script src="jquery.flot.pie.js"></script>
+
+  <style type='text/css'>
+    .punch {
+      color: black;
+      font-style: italic;
+    }
+
+    .live_lean_icon {
+       background-image: url('automation.png');
+    }
+    .think_big_icon {
+       background-image: url('bigdata.png');
+    }
+    .go_green_icon {
+       background-image: url('cloud.png');
+    }
+    .live_lean_icon, .think_big_icon, .go_green_icon  {
+       background-size: 100px 100px;
+       width:  100px;
+       height: 100px;
+       margin-top: 10px;
+    }
+
+    h3.live_lean, h4.live_lean {
+       color: #FAA330;
+    }
+
+    table.live_lean tr:nth-child(odd) {
+      background-color: #FAA330; 
+    }
+
+    h3.think_big, h4.think_big {
+       color: #FF815F;
+    }
+
+    table.think_big tr:nth-child(odd) {
+      background-color: #FF815F; 
+    }
+
+    h3.go_green, h4.go_green {
+       color: #00AEDA;
+    }
+    table.go_green tr:nth-child(odd) {
+      background-color: #00AEDA; 
+    }
+
+
+  </style>
+
+</head>
+<body>
+  <div ng-controller="ZoneCtrl"  class='col-md-12 col-lg-12' style='margin:auto 0px;float:none'>
+     <div class='row col-md-12'>
+       <div class='col-md-2 {{zone_class}}_icon'></div>
+       <div class='col-md-5 col-md-offset-4'><h3 class='ericsson-sfont {{zone_class}}'>{{zone_label}} Zone</h3><h4 class='ericsson-sfont' style='margin-left:50px'>4th Floor</h4></div>
+     </div>
+     <div ng-repeat="(key, value) in zone_types" ng-show="value.length" class="item col-md-4 col-lg-4" align='center'>
+       <h4 class='ericsson-sfont {{zone_class}}'>{{key}} Bays</h4>
+       <table class='table table-striped {{zone_class}}'>
+         <tbody>
+           <tr>
+           <th width='20%'>Booth Number</th>
+           <th width='80%'>Title</th>
+           <tr ng-show="!value.length"><td colspan=2 style='text-align:center'>No Booth registered for this Bay</td></tr>
+           <tr ng-repeat="row in value">
+             <td class='talign-center'>{{row.booth_number}}</td><td>{{row.booth_title}} <br> - <span class='punch'>{{row.description}}</span></td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+
+  </div>
+
+<script type='text/javascript'>
+
+var app = angular.module("Confluence", []);
+
+app.controller("ZoneCtrl", function($scope, $http) {
+  $http.get('booth_list.php?zone=Live Lean').
+    success(function(data, status, headers, config) {
+      $scope.zone_types = data.zone_types ;
+      $scope.zone_label = data.zone_label ;
+      $scope.zone_class = data.zone_class ;
+      $scope.conf_location = data.conf_location ;
+    }).
+    error(function(data, status, headers, config) {
+      // log error
+    });
+});
+
+</script>
+
+</body>
+</html>
+

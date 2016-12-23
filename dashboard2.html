@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='Confluence'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="icon" href="../../favicon.ico">-->
+
+  <title>Confluence 3 Dashboard</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="jquery.flot.js"></script>
+  <script src="jquery.flot.pie.js"></script>
+
+</head>
+<body>
+  <div ng-controller="ZoneCtrl"  class='col-md-12 col-lg-12' style='margin:auto 0px;float:none'>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" style='height:740px;' align='center' >
+          <h3 class='ericsson-font'>Confluence 3 @ {{conf_location}}</h3>
+          <img src='banner_2015.gif' /> 
+        </div>
+
+        <div class="item" style='height:740px' align='center'>
+          <h3 class='ericsson-font'>Zonewise booth count</h3>
+          <div id='stats' style='width:450px;height:450px;'> </div>
+        </div>
+
+        <div ng-repeat="zone in zones" class="item col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" style='min-height:740px' align='center'>
+           <h4 class='ericsson-sfont {{zone.zone_class}}'>{{zone.zone_label}} Zone</h4>
+           <div ng-repeat="(key, value) in zone.zone_types" class="item col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1" align='center'>
+             <h5 class='ericsson-sfont {{zone.zone_class}}'>{{key}} Bays</h5>
+             <table class='table table-striped {{zone.zone_class}}'>
+               <tbody>
+                 <tr>
+                 <th width='15%'>Booth Number</th>
+                 <th width='75%'>Title</th>
+                 <th width='10%'>Trend</th></tr>
+                 <tr ng-show="!value.length"><td colspan=3 style='text-align:center'>Voting not started for these Bays</td></tr>
+                 <tr ng-repeat="row in value"><td>{{row.booth_number}}</td><td>{{row.booth_title}}</td><td><span class='glyphicon glyphicon-arrow-up {{row.trend_color}}'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+<script type='text/javascript'>
+$(document).ready(function(){
+ $('.carousel').carousel();
+});
+</script>
+
+</html>
+

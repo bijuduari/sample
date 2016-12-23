@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='Confluence'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="icon" href="../../favicon.ico">-->
+
+  <title>Confluence 3.0 Dashboard</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="jquery.flot.js"></script>
+  <script src="jquery.flot.pie.js"></script>
+
+</head>
+<body>
+  <div ng-controller="ZoneCtrl"  class='col-md-12 col-lg-12 col-xlg-12 col-fhd-12' style='margin:auto 0px;float:none'>
+      <div class='marquee note' align='center'>
+       <span class='note1'>The Dashboard shows ONLY the audience voting. FINAL WINNERS will be announced based on the combined weighted scores out of audience voting and the jury assessment</span><br>
+       <span class='note2'>The booths are NOT ranked in any particular order. Only a point in time trend is shown based on number of votes. Final results may vary based on scoring.</span>
+      </div>
+      <div id='slideshow' align='center'>
+        <div  align='center' style='display:'>
+          <h3 class='ericsson-font'>Confluence 3.0 @ {{conf_location}}</h3>
+          <img src='banner_2015.gif' /> 
+        </div>
+
+        <div  style='display:none' align='center' class='col-md-12 col-sm-12 col-lg-12'>
+          <div class='col-md-6 col-sm-6 col-lg-6'> 
+            <h3 class='ericsson-font'>Zonewise booth count</h3>
+            <div id='stats' style='width:450px;height:450px;'> </div>
+            <!--<div id="legend"></div>-->
+          </div>
+          <div class='col-md-4 col-sm-4 col-lg-4 col-md-offset-1 col-sm-offset-1 col-lg-offset-1 margintop-100' >
+            <div class='box violet-bg'>
+              <div class="pull-left margintop-10"><i class="glyphicon glyphicon-home size-3x"></i></div>
+              <span class="badge pull-right margintop-20 orange-bg">{{stats.booth_count}}</span> <div class='size-2x'>Booths</div>
+            </div>
+            <div class='box purple-bg'>
+              <div class="pull-left margintop-10"><i class="glyphicon glyphicon-user size-3x"></i></div>
+              <span class="badge pull-right margintop-20 orange-bg">{{stats.participant_count}}</span> <div class='size-2x'>Participants</div>
+            </div>
+            <div class='box dorange-bg'>
+              <div class="pull-left margintop-10"><i class="glyphicon glyphicon-user size-3x"></i></div>
+              <span class="badge pull-right margintop-20 orange-bg">{{stats.voted_user_count}}</span> <div class='size-2x'># Voted User</div>
+            </div>
+            <div class='box red-bg'>
+              <div class="pull-left margintop-10"><i class="glyphicon glyphicon-thumbs-up size-3x"></i></div>
+              <span class="badge pull-right margintop-20 orange-bg">{{stats.votes_casted}}</span> <div class='size-2x'># Total Votes </div>
+            </div>
+          </div> 
+        </div>
+
+        <div ng-repeat="zone in zones" class="col-md-12 col-lg-12 col-sm-12" style='min-height:700px;display:none' align='center'>
+           <div class='tlegend col-md-4 col-sm-4 col-lg-4'>
+             <span class='glyphicon glyphicon-stop trend1'></span> Leading 
+             <span class='glyphicon glyphicon-stop trend2'></span> Emerging 
+             <span class='glyphicon glyphicon-stop trend3'></span> Can catch up anytime!
+           </div>
+ 
+           <div class='col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-lg-5 col-lg-offset-1'><h3 class='ericsson-sfont {{zone.zone_class}} talign-left'>{{zone.zone_label}} Zone</h3></div>
+          <div ng-repeat="(key, value) in zone.zone_types" class="item col-md-4 col-lg-4 col-sm-4" align='center'>
+             <h4 class='ericsson-sfont {{zone.zone_class}}'>{{key}} Bays</h4>
+             <table class='table table-striped {{zone.zone_class}}'>
+               <tbody>
+                 <tr>
+                 <th width='15%'>Booth Number</th>
+                 <th width='75%'>Title</th>
+                 <th width='10%'>Trend</th></tr>
+                 <tr ng-show="!value.length"><td colspan=3 style='text-align:center'>Voting not started for these Bays</td></tr>
+                 <tr ng-repeat="row in value"><td class='talign-center'>{{row.booth_number}}</td><td>{{row.booth_title}}</td><td class='talign-center'><span class='glyphicon glyphicon-arrow-up {{row.trend_color}}'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+        </div>
+      </div>
+
+  </div>
+
+</body>
+<script type='text/javascript'>
+$(document).ready(function(){
+	$(function() {
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() {
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		},  10000);
+		setInterval(function() {
+                    location.reload();
+                }, 50000);
+
+	});
+});
+</script>
+
+</html>
+

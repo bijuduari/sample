@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='Stats'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Confluence 3.0 Dashboard</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="jquery.flot.js"></script>
+  <script src="jquery.flot.pie.js"></script>
+
+<style type='text/css'>
+  .panel { padding-left: 0px !important; padding-right: 0px !important; margin: 20px !important;}
+</style>
+</head>
+<body>
+  <div ng-controller="ZoneCtrl"  class='col-md-12 col-lg-12' style='margin:auto 0px;float:none'>
+
+  <div class="panel panel-primary col-md-3 col-lg-3 col-sm-3">
+    <div class="panel-heading">
+        <h4 class="text-center">Zonewise Vote Count</h4>
+    </div>
+    <div id='zonewise_data' style='width:300px;height:300px;' align='center'> </div>
+  </div>
+
+  <div class="panel panel-success col-md-3 col-lg-3 col-sm-3">
+    <div class="panel-heading">
+        <h4 class="text-center">Categorywise Vote Count</h4>
+    </div>
+    <div id='typewise_data' style='width:300px;height:300px;' align='center'> </div>
+  </div>
+
+  <div class="panel panel-danger col-md-4 col-lg-4 col-sm-4" style='width:380px;height:360px'>
+    <div class="panel-heading">
+        <h4 class="text-center">Timewise Vote Count</h4>
+    </div>
+    <div id='timewise_data' style='width:220px;height:220px;margin:30px;float:left' > </div>
+    <div id='tlegend' style='margin-top:30px;'></div>
+  </div>
+
+
+
+
+  </div>
+
+<script type='text/javascript'>
+
+var app = angular.module("Stats", []);
+
+app.controller("ZoneCtrl", function($scope, $http) {
+  $http.get('stats.php').
+    success(function(data, status, headers, config) {
+      $scope.zonewise_count = data.zonewise_count ;
+      $scope.typewise_count = data.typewise_count ;
+      $scope.typewise_count = data.timewise_count ;
+      createZoneWiseGraph(data.zonewise_count);
+      createTypeWiseGraph(data.typewise_count);
+      createTimeWiseGraph(data.timewise_count);
+    }).
+    error(function(data, status, headers, config) {
+      // log error
+    });
+});
+function createTypeWiseGraph(graph_info) {
+  var data = [];
+  var color_code = { 'Demo' : '#4F7EFF','Idea' : '#B2DF45', 'Creative': '#FFA200'};
+  var i=0;
+  $(graph_info).each(function(index,value) {
+    var type_color = color_code[value.label];
+    data.push({'label': value.label, 'data' : value.data, 'color': type_color});
+     i++;
+  });
+
+      var placeholder = $('#typewise_data');
+      if(placeholder.length == 1) {
+      $.plot(placeholder, data, {
+          series: {
+              pie: { 
+                  show: true,
+                  label: {
+                    show: true,
+                   radius: 2 / 4,
+                   formatter: function (label, series) {
+                        return '<div style="font-size:10pt;padding:2px;color:white;">' + label + '<br/>' + series.data[0][1] + '</div>';
+                    },
+                    threshold: 0.1
+                  }
+              }
+          },
+          legend: {
+            show: false,
+          }
+      });
+      }
+
+}
+
+
+
+function createZoneWiseGraph(graph_info) {
+  var data = [];
+  var color_code = { 'Live Lean' : '#F36868','Think Big' : '#AE77EF', 'Go Green': '#26CF2D'};
+  var i=0;
+  $(graph_info).each(function(index,value) {
+    var type_color = color_code[value.label];
+    data.push({'label': value.label, 'data' : value.data, 'color': type_color});
+     i++;
+  });
+
+      var placeholder = $('#zonewise_data');
+      if(placeholder.length == 1) {
+      $.plot(placeholder, data, {
+          series: {
+              pie: { 
+                  show: true,
+                  label: {
+                    show: true,
+                   radius: 2 / 4,
+                   formatter: function (label, series) {
+                        return '<div style="font-size:10pt;padding:2px;color:white;">' + label + '<br/>' + series.data[0][1] + '</div>';
+                    },
+                    threshold: 0.1
+                  }
+              }
+          },
+          legend: {
+            show: false,
+          }
+      });
+      }
+
+}
+
+
+function createTimeWiseGraph(graph_info) {
+  var data = [];
+  var i=0;
+  $(graph_info).each(function(index,value) {
+    //var type_color = color_code[value.label];
+    data.push({'label': value.label, 'data' : value.data});
+     i++;
+  });
+
+      var placeholder = $('#timewise_data');
+      if(placeholder.length == 1) {
+      $.plot(placeholder, data, {
+          series: {
+              pie: { 
+                  show: true,
+                  label: {
+                    show: false,
+                  }
+              }
+          },
+          legend: {
+            show: true,
+            container: $('#tlegend'),
+              labelFormatter: function(label, series) {
+                    var number= series.data[0][1]; //kinda weird, but this is what it takes
+                    return('&nbsp;<b>'+label+'</b>:&nbsp;'+ number);
+                }
+          }
+      });
+      }
+
+}
+</script>
+
+</body>
+</html>
+

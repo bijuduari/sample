@@ -1,0 +1,121 @@
+
+#wrapper{
+	width:725px;
+	height:350px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	-moz-box-shadow: 5px 5px 10px 1px #848484;
+	-webkit-box-shadow: 5px 5px 10px 1px #848484;
+	box-shadow: 5px 5px 10px 1px #848484;
+	background-color:white;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:2px solid #848484;
+	overflow:auto;
+}
+#field
+{
+	width:550px;
+	height:120px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	-moz-box-shadow: 5px 5px 10px 1px #848484;
+	-webkit-box-shadow: 5px 5px 10px 1px #848484;
+	box-shadow: 5px 5px 10px 1px #848484;
+	background-color:white;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:2px solid #848484;
+}
+#top
+{
+	margin: 10px;
+	padding: 0;
+	
+	}
+
+#bottom
+{
+	clear:both;
+	position:absolute;
+	right:33px;
+	bottom: 10px;	
+	
+}
+#firstCol {border:1px solid #FF0000;
+			width:21%;
+			float:left;
+			vertical-align:top;
+	
+		}
+		#secCol {border:1px solid #FF0000;
+			width:21%;
+			float:left;
+			vertical-align:top;
+			
+			
+		}
+		#threeCol {border:1px solid #FF0000;
+			width:21%;
+			float:left;
+			vertical-align:top;	
+		}
+		#fourCol {
+		border:1px solid #FF0000;
+			width:21%;
+			float:left;
+			vertical-align:top;	
+		}
+		
+		#fiveCol {
+		border:1px solid #FF0000;	width:15%;
+			float:left;
+			vertical-align:top;
+		
+		
+		}
+		#firstCol span, #secCol span, #threeCol span
+		{
+		font-size:16px;
+		width:20px;
+		color:red;
+		}
+		.txtInput {
+			background-color:#ffc;
+			margin:10px;
+			margin-left:4px;
+			border:1px solid #A4A4A4;
+			width:88%;
+		}
+		.fileInput {
+			border:1px solid #000;
+			background-color:#ffc;
+			width:100%;
+		}
+		#photo
+		{
+		margin:10px;
+		}
+		
+		.button_class {
+			margin-left: 5px;}
+			
+.buttons{text-align:right;}
+.error
+{
+text-align:center; color:red;
+}
+
+form {
+    margin-top: 0em !important;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='Confluence'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="icon" href="../../favicon.ico">-->
+
+  <title>Confluence 3 Dashboard</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="dashboard.css" rel="stylesheet">
+  <link href="tablesort.css" rel="stylesheet">
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="angular-tablesort.js"></script>
+  <script src="review.js"></script>
+
+  <style type='text/css'>
+    .trend1 { background-color: #459F49 !important; color: #000 !important; }
+    .trend2, .trend3 { color: #000; }
+  </style>
+
+</head>
+<body>
+  <div ng-controller="ZoneCtrl"  class='col-sm-12 col-md-12 col-lg-12' style='margin:auto 0px;float:none'>
+
+        <div ng-repeat="zone in zones" class="item" align='center'>
+           <h3 class='ericsson-sfont {{zone.zone_class}}'>{{zone.zone_label}} Zone</h3>
+           <div ng-repeat="(key, value) in zone.zone_types" class="item" align='center'>
+             <h4 class='ericsson-sfont {{zone.zone_class}}'>{{key}} Bays</h4>
+             <table class='table table-striped {{zone.zone_class}}' ts-wrapper>
+               <tbody>
+                 <tr><th colspan=4>Average Vote count = {{avg_votes[zone.zone_class][key]}}</th><th colspan=5>Average weighted score = {{avg_scores[zone.zone_class][key]}}</th></tr>
+                 <tr>
+                 <th ts-criteria="booth_number">Booth Number</th>
+                 <th ts-criteria="booth_title">Title</th>
+                 <th ts-criteria="vote_count|parseInt"># Votes</th>
+                 <th ts-criteria="informative_avg|parseFloat">Informative</th>
+                 <th ts-criteria="innovative_avg|parseFloat">Innovative</th>
+                 <th ts-criteria="presentability_avg|parseFloat">Presentability</th>
+                 <th ts-criteria="avg_by_weightage|parseFloat">Overal Weightage</th>
+                 <th ts-criteria="jury_score|parseFloat">Jury Score</th>
+                 <th ts-criteria="final_score|parseFloat">Final Score</th></tr>
+                 <tr ng-repeat="row in value" ts-repeat class='{{row.trend_color}}'>
+                   <td class='talign-center'>{{row.booth_number}}</td>
+                   <td>{{row.booth_title}}</td>  
+                   <td class='talign-center'>{{row.vote_count}}</td> 
+                   <td class='talign-center'>{{row.informative_avg}}</td>
+                   <td class='talign-center'>{{row.innovative_avg}}</td>
+                   <td class='talign-center'>{{row.presentability_avg}}</td>  
+                   <td class='talign-center'>{{row.avg_by_weightage}}</td>
+                   <td class='talign-center'></td>
+                   <td class='talign-center'></td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+        </div>
+  </div>
+</body>
+</html>
+

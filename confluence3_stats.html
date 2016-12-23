@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="icon" href="../../favicon.ico">-->
+
+  <title>Innovation Box</title>
+  <!-- Bootstrap core CSS -->
+  <link href="/InnovationWB/CSS/bootstrap.css" rel="stylesheet">
+  <script src="/InnovationWB/SCRIPTS/jquery-1.10.2.min.js"></script>
+  <script src="/InnovationWB/SCRIPTS/bootstrap.min.js"></script>
+
+<style type='text/css'>
+ .ericsson-font {
+   font-family: Ericsson Capital TT;
+   line-height: 5em;
+   font-weight: bold;
+ }
+ .ericsson-sfont {
+   font-family: Ericsson Capital TT;
+   /*line-height: 1em;*/
+   font-weight: bold;
+ }
+
+.list-group-header {
+   font-family: Ericsson Capital TT;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.bid {
+    width: 200px;
+}
+.btitle {
+    width: 300px;
+}
+.btrend {
+    width: 100px;
+}
+
+.dgreen {
+ color: #0D6F12;
+}
+
+.lgreen {
+ color: #59EF5F;
+}
+
+.lred {
+  color:  #FFCFCF;
+}
+
+.tred {
+  color:  #EF6868;
+}
+
+.tblue {
+  color:  #2B1D9F;
+}
+
+.lorange {
+ color: #FFAD1F;
+}
+
+table.live-lean tr:nth-child(odd) {
+  background-color: #C3DFC7; 
+}
+table.live-lean, table.think-big, table.go-green tr:nth-child(even) {
+  background-color: #FFFFCF; 
+}
+
+table.think-big tr:nth-child(odd) {
+  background-color: #FFCFCF; 
+}
+
+
+table.go-green tr:nth-child(odd) {
+  background-color: #CFEEFF; 
+}
+
+table tr td {
+  padding: 4px !important;
+}
+
+
+/*h4 { margin-top: 10px !important }*/
+
+</style>
+
+
+</head>
+
+<body>
+
+  <div class='col-md-12 col-sm-12' style='margin:auto 0px;float:none'>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- Indicators -->
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" style='height:740px;' align='center' >
+           <h3 class='ericsson-font'>Confluence 3 @ Bangalore</h3>
+          <img src='/InnovationWB/IMAGES/confluence3/banner_2015.gif' /> 
+        </div>
+        <div class="item" style='height:740px' align='center'>
+           <h3 class='ericsson-font'>Zonewise booth count</h3>
+         <div id='stats' style='width:450px;height:450px;'> </div>
+        </div>
+        <div class="item col-md-8 col-md-offset-2" style='min-height:740px' align='center'>
+           <h3 class='ericsson-sfont dgreen'>Live Lean - Booth list</h3>
+           <div class="item col-md-6" align='center'>
+             <h4 class='ericsson-sfont dgreen'>Idea Bays</h4>
+             <table class='table table-striped live-lean'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>16</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+           <div class="item col-md-6"  align='center'>
+             <h4 class='ericsson-sfont dgreen'>Demo Bays</h4>
+             <table class='table table-striped live-lean'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>9</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+           <div class="item col-md-6"  align='center'>
+             <h4 class='ericsson-sfont dgreen'>Creative Bays</h4>
+             <table class='table table-striped live-lean'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>11</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lorange'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+        </div>
+
+
+        <div class="item col-md-8 col-md-offset-2" style='min-height:740px' align='center'>
+           <h3 class='ericsson-sfont tred'>Think Big - Booth list</h3>
+           <div class="item col-md-6" align='center'>
+             <h4 class='ericsson-sfont tred'>Idea Bays</h4>
+             <table class='table table-striped think-big'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>1</td><td>Smart Home</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>2</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>3</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>4</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>8</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>9</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>10</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>11</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>12</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>15</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>16</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+           <div class="item col-md-6"  align='center'>
+             <h4 class='ericsson-sfont tred'>Demo Bays</h4>
+             <table class='table table-striped think-big'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>1</td><td>Smart Home</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>2</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>3</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>4</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>5</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>8</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>9</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+           <div class="item col-md-6"  align='center'>
+             <h4 class='ericsson-sfont tred'>Creative Bays</h4>
+             <table class='table table-striped think-big'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>1</td><td>Smart Home</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>2</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>3</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>4</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>5</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>9</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>10</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lorange'></span></td></tr>
+                 <tr><td>11</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lorange'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+
+        </div>
+
+        <div class="item col-md-8 col-md-offset-2" style='min-height:740px' align='center'>
+           <h3 class='ericsson-sfont tblue'>Go green - Booth list</h3>
+           <div class="item col-md-6" align='center'>
+             <h4 class='ericsson-sfont tblue'>Idea Bays</h4>
+             <table class='table table-striped go-green'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>1</td><td>Smart Home</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>2</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>3</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>4</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>8</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>9</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>10</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>11</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>12</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>15</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>16</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+           <div class="item col-md-6"  align='center'>
+             <h4 class='ericsson-sfont tblue'>Demo Bays</h4>
+             <table class='table table-striped go-green'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>1</td><td>Smart Home</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>2</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>3</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>4</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>5</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>8</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>9</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+           <div class="item col-md-6"  align='center'>
+             <h4 class='ericsson-sfont tblue'>Creative Bays</h4>
+             <table class='table table-striped go-green'>
+               <tbody>
+                 <tr><th>#</th>
+                 <th>Title</th>
+                 <th>Trend</th></tr>
+                 <tr><td>1</td><td>Smart Home</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>2</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>3</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>4</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>5</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up dgreen'></span></td></tr>
+                 <tr><td>9</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lgreen'></span></td></tr>
+                 <tr><td>10</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lorange'></span></td></tr>
+                 <tr><td>11</td><td>Cloud DRM</td><td><span class='glyphicon glyphicon-arrow-up lorange'></span></td></tr>
+               </tbody>
+             </table>
+           </div>
+
+
+        </div>
+
+
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+     </div>
+  </div>
+
+
+<script src="/InnovationWB/SCRIPTS/jquery.flot.js"></script>
+<script src="/InnovationWB/SCRIPTS/jquery.flot.pie.js"></script>
+
+<script type='text/javascript'>
+
+$(function() {
+
+  var data = [
+        { label: "Live Lean",  data: 14, color: '#F9A12F'},
+        { label: "THINK BIG",  data: 8, color: '#F26341'},
+        { label: "GO GREEN",  data: 4, color: '#3EB9E0'},
+      ];
+
+      var placeholder = $('#stats');
+          $.plot(placeholder, data, {
+              series: {
+                  pie: { 
+                      show: true
+                  }
+              },
+              legend: {
+                show: false
+              }
+            });
+});
+
+
+</script>
+
+</body>
+
+</html>
+
